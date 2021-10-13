@@ -237,7 +237,7 @@ else:
 
 #print(slack_message)
 
-r = requests.post("https://hooks.slack.com/services/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",
+r = requests.post(os.environ.get("slack-hook-url"),
                   data=json.dumps(slack_message),
                   headers={'Content-Type': 'application/json'})
 
