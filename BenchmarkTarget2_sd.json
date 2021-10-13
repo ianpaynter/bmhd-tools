@@ -1,0 +1,86 @@
+{
+    "1": {
+        "type": "other",
+        "line": "import numpy as np\n",
+        "preceding blanks": 0,
+        "preceding decorators": 0
+    },
+    "2": {
+        "type": "other",
+        "line": "from time import sleep\n",
+        "preceding blanks": 0,
+        "preceding decorators": 0
+    },
+    "6": {
+        "type": "function",
+        "line": "def my_func_one():\n",
+        "preceding blanks": 2,
+        "preceding decorators": 1
+    },
+    "8": {
+        "type": "other",
+        "line": "    mem_hog = np.arange(0, 1000000)\n",
+        "preceding blanks": 1,
+        "preceding decorators": 1
+    },
+    "9": {
+        "type": "other",
+        "line": "    mem_jog = np.arange(0, 100)\n",
+        "preceding blanks": 0,
+        "preceding decorators": 1
+    },
+    "13": {
+        "type": "function",
+        "line": "def my_func_two():\n",
+        "preceding blanks": 2,
+        "preceding decorators": 2
+    },
+    "15": {
+        "type": "other",
+        "line": "    sleep(1)\n",
+        "preceding blanks": 1,
+        "preceding decorators": 2
+    },
+    "16": {
+        "type": "other",
+        "line": "    sleep(2)\n",
+        "preceding blanks": 0,
+        "preceding decorators": 2
+    },
+    "20": {
+        "type": "function",
+        "line": "def main():\n",
+        "preceding blanks": 2,
+        "preceding decorators": 3
+    },
+    "22": {
+        "type": "other",
+        "line": "    my_func_one()\n",
+        "preceding blanks": 1,
+        "preceding decorators": 3
+    },
+    "23": {
+        "type": "other",
+        "line": "    my_func_one()\n",
+        "preceding blanks": 0,
+        "preceding decorators": 3
+    },
+    "24": {
+        "type": "other",
+        "line": "    my_func_two()\n",
+        "preceding blanks": 0,
+        "preceding decorators": 3
+    },
+    "27": {
+        "type": "other",
+        "line": "if __name__ == \"__main__\":\n",
+        "preceding blanks": 2,
+        "preceding decorators": 3
+    },
+    "29": {
+        "type": "other",
+        "line": "    main()\n",
+        "preceding blanks": 1,
+        "preceding decorators": 3
+    }
+}
