@@ -8,6 +8,10 @@ from matplotlib import pyplot as plt
 import matplotlib as mpl
 import requests
 import json
+from dotenv import load_dotenv
+
+# Load environmental variables
+load_dotenv()
 
 # Set matplotlib defaults for fonts
 mpl.rc('font', family='Times New Roman')
@@ -237,7 +241,7 @@ else:
 
 #print(slack_message)
 
-r = requests.post(os.environ.get("slack-hook-url"),
+r = requests.post(os.getenv('SLACK_HOOK_URL'),
                   data=json.dumps(slack_message),
                   headers={'Content-Type': 'application/json'})
 
