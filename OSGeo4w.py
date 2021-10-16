@@ -2,7 +2,11 @@ import h5py
 import os
 import subprocess as sub
 from google.cloud import storage
+from time import time
+import numpy as np
 
+# Start time
+stime = time()
 # Point to the service account credentials
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'F:/USRA/BMHDTools/causal-armor-328417-b56dc4d9394b.json'
 # Make Google Cloud client object linked to COG project
@@ -18,9 +22,12 @@ files = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.h5')]
 file_count = 0
 # File total
 file_total = len(files)
-
+# Print update
+print(f'Done with setup in {np.around(time() - stime, decimals=2)}s')
 # For each file
 for file in files:
+    # Checkpoint time
+    ptime = time()
     # Iterate file count
     file_count += 1
     # Form the base name of the file (removing the .h5 suffix)
@@ -128,3 +135,5 @@ for file in files:
         blob.upload_from_file(upload_file)
     # Make the COG public
     blob.make_public()
+    # Print an update
+    print(f'Time to process and upload {basename}: {np.around(time() - ptime, decimals=2)}s')
